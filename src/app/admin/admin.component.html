@@ -1,0 +1,115 @@
+
+<div>
+    <form (ngSubmit)="doFormSubmit()" #PlantForm="ngForm"></form>
+</div>
+<table style="background-color: rgb(244, 221, 226); border: solid 2px;">
+    <tr>
+        <td style="width: 20%; background-color: rgb(244, 221, 226);">
+            
+            <table>
+
+                <div class="form-group">
+                    <label>Plant Id</label>
+                    <input type="text" [(ngModel)]="p.plantId" class="form-control" id="pid" name="pid"
+                        #plantId="ngModel" placeholder="Enter Plant Id" required pattern="[0-9][0-9][0-9]">
+                        <div *ngIf="plantId.invalid">
+                            <span style="color: red;" *ngIf="plantId.errors?.['required']">
+                                Plant Id is required 
+                            </span>
+                            <span style="color: red;" *ngIf="plantId.errors?.['pattern']">
+                                plant Id is not valid
+                              </span>
+                      
+                        </div>
+                </div>
+    <br>
+    <div class="form-group">
+        <label>Plant Name</label>
+        <input type="text" [(ngModel)]="p.plantName" class="form-control" id="pname" name="pname"
+            #plantName="ngModel" placeholder="Enter Plant Name" required pattern="[a-zA-Z]+">
+            <div *ngIf="plantName.invalid">
+                <span style="color: red;" *ngIf="plantName.errors?.['required']">
+                    Plant Name is required 
+                </span>
+                <span style="color: red;" *ngIf="plantName.errors?.['pattern']">
+                    Plant Name is not valid
+                  </span>
+          
+            </div>
+    </div>
+    
+    <tr>
+        <td> price </td>
+        <td> <input type="text" #price> </td>
+     </tr>    
+    
+
+    <tr>
+        <td>Type Of Plant</td>
+        <td> 
+            <select #typeOfPlant>
+                <option> Fruit Plant </option>
+                <option> Flower Plant </option>
+                
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Bloom Season</td>
+        <td> 
+            <select #bloomSeason>
+                <option> Summer </option>
+                <option> Winter </option>
+                <option> Spring </option>
+                
+            </select>
+        </td>
+    </tr>
+
+     <tr>
+        <td> About </td>
+        <td> <input type="text" #about> </td>
+     </tr>
+     <tr>
+      <td> Height </td>
+        <td> <input type="text" #height> </td>
+     </tr>
+     
+    
+    <tr>
+        <td> Discount </td>
+        <td> <input type="text" #discount/> </td>
+    </tr>
+    <tr>
+        <td> starRating </td>
+        <td> <input type="text" #starRating/> </td>
+    </tr>
+    
+    
+
+    <tr>
+        <td> Image Name </td>
+        <td> <input type="text" #imageName/> </td>
+    </tr>
+        
+    <tr>
+         <td> <input type="reset" vaule="Clear All"></td>
+         <td> <input type="button" 
+            (click)="readPlant(plantId.value,plantName.value,bloomSeason.value,typeOfPlant.value,height.value,discount.value,about.value,imageName.value,price.value,starRating.value)"
+             value="Add Plant" /> </td>
+        </tr>
+    </table>
+    <br/>
+
+</td>
+
+<td style="width: 80%;">
+    
+    <!-- <app-tdfseed></app-tdfseed> -->
+</td>
+
+    </tr>
+</table>
+
+

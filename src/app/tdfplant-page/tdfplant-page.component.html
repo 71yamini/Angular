@@ -1,0 +1,99 @@
+<!-- <div style="margin-left: 15%;width: 25%; height: 100%; margin-bottom: 20%;">
+   
+    <form (ngSubmit)="doFormSubmit()" #plantForm="ngForm"> 
+        <div class="form-group">
+            <label>Enter Plant Id</label>
+            <input type="text" [(ngModel)]="p.plantId"
+             class="form-control" 
+             id="pid" 
+             name="pid" #PlantId="ngModel" required pattern="[0-9][0-9][0-9]">
+             <div *ngIf="PlantId.invalid">
+                <span style="color: red;" *ngIf="PlantId.errors?.['required']">
+    
+                    PlantId is required Field
+                </span>
+                <span style="color: red;" *ngIf="PlantId.errors?.['pattern']">
+                    PlantId is not valid
+                </span>
+             </div>
+             
+        </div>
+    
+        <div class="form-group">
+            <label>Enter Plant Name</label>
+            <input type="text" #PlantName="ngModel" pattern="[a-zA-Z]+"  [(ngModel)]="p.plantName" class="form-control" id="pname" name="pname" placeholder="exp{like Rose,Marigold}" required>
+            <div *ngIf="PlantName.invalid">
+                <span style="color:red;" *ngIf="PlantName.errors?.['required']">
+                    Plant Name is required Field
+                </span>
+                <span style="color:red;" *ngIf="PlantName.errors?.['pattern']">
+                    Plant Name is not valid
+                </span>
+                
+                </div>
+            </div>
+        
+    
+        <div class="form-group">
+            <label>Height</label>
+            <input type="text" [(ngModel)]="p.height"
+             class="form-control" 
+             id="pheight" 
+             name="pheight" #Height="ngModel" required pattern="[0-9]">
+             <div *ngIf="Height.invalid">
+                <span style="color: red;" *ngIf="Height.errors?.['required']">
+    
+                    Height is required Field
+                </span>
+                <span style="color: red;" *ngIf="Height.errors?.['pattern']">
+                    Height is not valid 
+                </span>
+    
+            </div>
+         </div>
+    
+         <div class="form-group">
+            <label>typeOfPlant</label>
+            <input type="text" [(ngModel)]="p.typeOfPlant" class="form-control" id="ptypeOfPlant" name="ptypeOfPlant" placeholder="typeOfPlant ie flowerplant">
+        </div>
+    
+        <div class="form-group">
+            <label>Bloom Season</label>
+            <input type="text" [(ngModel)]="p.bloomSeason" class="form-control" id="pbloomseason" name="pbloomseason" placeholder="Bloom Season ie summer">
+        </div>
+    
+        <div class="form-group">
+            <label> Price</label>
+            <input type="text" [(ngModel)]="p.price"
+             class="form-control" 
+             id="pprice" 
+             name="pprice" #Price="ngModel" required pattern="[0-9][0-9][0-9]">
+             <div *ngIf="Price.invalid">
+                <span style="color: red;" *ngIf="Price.errors?.['required']">
+    
+                    Price is required Field
+                </span>
+                <span style="color: red;" *ngIf="Price.errors?.['pattern']">
+                    Price is not valid
+                </span>
+             </div>
+            
+        </div>
+    
+        <div class="form-group">
+            <label>Discount</label>
+            <input type="text" [(ngModel)]="p.discount" class="form-control" id="pdiscount" name="pdiscount" placeholder="Discount ie 0">
+        </div>
+    
+        <div class="form-group">
+            <label>Plant Description</label>
+            <input type="text" [(ngModel)]="p.about" class="form-control" id="pabout" name="pabout" placeholder="About ">
+        </div>
+       
+        <div class="form-group">
+            <br/>
+            <input type="Submit"[disabled]="plantForm.form.invalid " class ="forsubmit" value="Submit">
+        </div>
+    </form>
+    </div>
+     -->

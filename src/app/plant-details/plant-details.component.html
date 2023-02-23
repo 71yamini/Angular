@@ -1,0 +1,27 @@
+<img src="/assets/images/{{p.imageName}}" alt="Plant image" width="250px" height="250px">
+<h2 style="color: brown; font-style: italic;">{{p.plantName}} </h2>
+<table>
+    <tr>
+        
+        <td> 
+            
+            <p> {{p.about}} </p>
+            <hr/>
+            <span>Plant Price <span>{{p.price}}    </span>  
+                <i *ngIf="p.discount>0"> 
+                    with {{p.discount}}% Off 
+                    <span *ngIf="p.discount>9">
+                        <b style="color: blue; font-family: Georgia, 'Times New Roman', Times, serif;"><u> Recommended</u></b>
+                    </span>
+                </i> 
+        
+            </span> 
+            <br/>
+            Plant Height {{p.height}} cm
+           
+            
+        </td>
+        
+    </tr>
+</table>
+

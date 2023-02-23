@@ -1,0 +1,79 @@
+<div >
+    <table>
+        <tr>
+            <td>
+                <div class="Watchlist">
+                    Watchlist <br/>
+                    {{watchlistCount}}
+                </div>    
+            </td>
+            <td>
+                Filter Plant
+                Type Of Plant
+                
+                    <select #typeOfPlant (change)="getFilterData(typeOfPlant.value)">
+                        <option> Fruit Plant </option>
+                        <option> Vegetable Plant </option>
+                        <option> Flower Plant </option>
+                     
+                    </select>
+                   
+            
+            </td>
+        
+            <td>
+                Filter Plant
+                StarRating
+                
+                    <select #starRating (change)="getFilterData2(starRating.value)">
+                        <option> 2 </option>
+                        <option> 3 </option>
+                        <option> 4 </option>
+                        <option> 5 </option>
+                    </select>
+                   
+            
+            </td>
+            
+        </tr>
+    </table>
+   
+
+
+</div> 
+
+
+
+
+<hr/>
+<div *ngFor="let p of allPlants">
+<table>
+    <tr>
+        <td> <img src="/assets/images/{{p.imageName}}" alt="Plant Image" width="120px" height="150px"> </td>
+        <td> 
+            <h2>{{p.plantName}} </h2>
+            <p> {{p.about}} </p>
+            <hr/>
+            <span>Plant Price <span>{{<p class="price"></p>|currency</span> 
+                <i *ngIf="p.discount>0"> 
+                    with {{p.discount}}% Off 
+                    <span *ngIf="p.discount>9">
+                        <b style="color: blue; font-family: Georgia, 'Times New Roman', Times, serif;"><u> Recommended</u></b>
+                    </span>
+                </i> 
+        
+            </span> 
+            <br/>
+        
+            <hr/>
+            <button value="{{p.plantId}}" (click)="goForBuy(plant.value)" #plant> Buy Plants </button>
+            <button value="{{p.plantId}}" (click)="addWatchlist(plant.value)" #plant> Add to Watchlist </button>
+            <br/>
+            <button value="{{p.plantId}}" (click)="viewPlantDetails(plant.value)" #plant> View Details</button>
+                
+            
+        </td>
+        
+    </tr>
+</table>
+</div>

@@ -1,0 +1,43 @@
+<div >
+    <table>
+        <tr>
+            <td>
+                <div class="Watchlist">
+                    Watchlist <br/>
+                    {{watchlistCount}}
+                </div>    
+            </td>
+            <td>
+                Filter Plant
+                Type Of Plant
+                
+                    <select #typeOfPlant (change)="getFilterData(typeOfPlant.value)">
+                        <option> Fruit Plant </option>
+                        <option> Flower Plant </option>
+                     
+                    </select>
+                   
+            
+            </td>
+        
+            <td>
+                Filter Plant
+                StarRating
+                
+                    <select #starRating (change)="getFilterData2(starRating.value)">
+                        <option> 2 </option>
+                        <option> 3 </option>
+                        <option> 4 </option>
+                        <option> 5 </option>
+                    </select>
+                   
+            
+            </td>
+            
+        </tr>
+    </table>
+   
+
+
+</div>
+
